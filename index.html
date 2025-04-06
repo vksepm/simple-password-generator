@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/Lucide.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Use Inter font */
         body {
@@ -80,11 +81,11 @@
                 placeholder="Generating..."
             >
             <div class="absolute inset-y-0 right-0 flex items-center pr-3 space-x-2">
-                 <button id="copyButton" title="Copy password" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
-                    <i class="lucide lucide-copy text-xl"></i>
+                 <button id="copyButton" title="Copy password" class="text-gray-500 hover:text-indigo-600 focus:outline-none p-2">
+                    <i data-lucide="copy" class="w-5 h-5"></i>
                 </button>
-                 <button id="refreshButton" title="Generate new password" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
-                    <i class="lucide lucide-refresh-cw text-xl"></i>
+                 <button id="refreshButton" title="Generate new password" class="text-gray-500 hover:text-indigo-600 focus:outline-none p-2">
+                    <i data-lucide="refresh-cw" class="w-5 h-5"></i>
                 </button>
             </div>
             <div id="copyFeedback" class="absolute -bottom-5 right-3 text-xs text-green-600 opacity-0">
@@ -436,6 +437,8 @@
         // Generate an initial password on load
         handlePasswordTypeChange(); // Call this to set initial checkbox states and generate
 
+        // Initialize Lucide icons
+        lucide.createIcons();
     </script>
 </body>
 </html>
