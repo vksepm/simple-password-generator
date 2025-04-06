@@ -1,4 +1,4 @@
-# Password Generator
+# Simple Password Generator
 
 This is a simple password generator web application that allows users to create secure passwords with customizable options.
 
